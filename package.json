@@ -11,18 +11,17 @@
     "autoprefixer-core": "^6.0.1",
     "browser-sync": "^2.11.1",
     "csswring": "^4.2.1",
-    "gulp": "^3.9.1",
+    "es6-promise": "^3.2.1",
+    "gulp": "^3.8.11",
     "gulp-bower": "0.0.10",
     "gulp-jshint": "^2.0.1",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1",
-    "jshint": "^2.9.2",
-    "node-sass": "^2.1.1",
-    "pangyp": "^2.3.3",
-    "pug": "^2.0.0-alpha8",
-    "v8flags": "^2.0.11"
+
+    "gulp-uglify": "^1.5.3"
+
   },
   "bugs": {
     "url": "https://github.com/npm/npm/issues"
