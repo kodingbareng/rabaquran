@@ -1,1 +1,1 @@
-console.log("mainjs");
+console.log("Gulp Bootstrap Starter Beta!");

@@ -43,33 +43,27 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest(config.publicDir + '/fonts'));
 });
 
+gulp.task('bootstrapjs',function(){
+  return gulp.src(config.bootstrapDir+'/assets/javascripts/bootstrap.min.js')
+  .pipe(gulp.dest(config.publicDir+'/js/vendor'))
+})
 
 gulp.task('js',function(){
   return gulp.src('./src/js/*.js')
   .pipe(plumber(plumberErrorHandler))
   .pipe(jshint())
-  .pipe(jshint.reporter('fail'))
-  .pipe(gulp.dest(config.publicDir+'/js'));
-})
-
-
-gulp.task('compress',function(){
-  return gulp.src(config.publicDir+'/js/main.js')
-  .pipe(plumber(plumberErrorHandler))
-  .pipe(jshint())
-  .pipe(jshint.reporter('fail'))
+  .pipe(concat('main.js'))
   .pipe(uglify())
+  .pipe(jshint.reporter('fail'))
   .pipe(gulp.dest(config.publicDir+'/js'));
 })
-
 gulp.task('watch',function(){
   gulp.watch('./src/css/main.scss',['css']);
-  gulp.watch('./src/js/*.js',['js']);
-  gulp.watch(config.publicDir+'/js/main.js',['compress']);
+  gulp.watch("./src/js/*.js",['js']);
   gulp.watch("app/**/**/**").on('change', reload);;
 })
 
-gulp.task('serve',['css','fonts','js','compress','watch'],function(){
+gulp.task('serve',['css','fonts','bootstrapjs','js','watch'],function(){
   browserSync.init({
     open: true,
     port: 8080,

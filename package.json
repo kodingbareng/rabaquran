@@ -44,8 +44,7 @@
     "jshint": "^2.9.1"
   },
   "scripts": {
-    "deploy": "git checkout master && git subtree split --prefix app -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages && echo \"Berhasil di deploy ke branch gh-pages kak!\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "git checkout master && git subtree split --prefix app -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages && echo \"Berhasil di deploy ke branch gh-pages kak!\""
   },
   "author": "muslih",
   "license": "MIT"
