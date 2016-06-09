@@ -21,13 +21,13 @@
 
         <!-- Add your site or application content here -->
         <header>
-            <div class="container-fluid">
-                <h1><a href="index.html">RabaQuran</a></h1>
-                <p class="lead">Selamat Datang di Website Rabaquran</p>
+            <div class="container">
+                <h1 class="text-center"><a href="index.html">RabaQuran</a></h1>
+                <p class="lead text-center">Selamat Datang di Website Rabaquran</p>
             </div>
         </header>
         <nav class="navbar navbar-default" role="navigation">
-          <div class="container-fluid">
+          <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -40,18 +40,18 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar">
-              <ul class="nav navbar-nav">
+              <ul class="nav navbar-right navbar-nav">
                 <li class="active"><a href="#">Beranda</a></li>
                 <li><a href="#">Tentang</a></li>
                 <li><a href="#">Galeri</a></li>
                 <li><a href="#">Kontak</a></li>
               </ul>
-              <form class="navbar-form navbar-left" role="search">
+              <!-- <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
                   <input type="text" class="form-control" placeholder="Search">
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
-              </form>
+              </form> -->
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"></a></li>
 
@@ -59,16 +59,49 @@
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>
-        <div class="container-fluid">
+        <section id="carousel">
+          <!-- <div class="container"> -->
+            <div id="carousel-generic" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-generic" data-slide-to="2"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="img/cover.jpg" alt="">
+                  <div class="carousel-caption">
+
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>
+          <!-- </div> -->
+        </section>
+        <section id="title">
+          <div class="container">
             <div class="jumbotron">
-              <h1>Assalamualaikum Saudaraku !!!<h1>
+              <h1>Assalamualaikum </h1>
 
               <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore vitae, saepe corporis accusamus optio odio omnis earum minima soluta ratione id alias, rerum et, maiores, eaque nobis porro quibusdam praesentium?
               </p>
-              <p>Auto push gh-pages</p>
+
             </div>
-        </div>
+          </div>
+        </section>
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
