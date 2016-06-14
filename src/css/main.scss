@@ -20,6 +20,11 @@
           color: $color-text;
           text-decoration: underline;
           background: transparent;
+
+          &:hover {
+            background: transparent;
+            color: $color-accent;
+          }
         }
       }
       a {
