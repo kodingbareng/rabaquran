@@ -2,7 +2,19 @@ $bootstrap-sass-asset-helper: false !default;
 //
 // Variables
 // --------------------------------------------------
+//
+// Additional style
+// --------------------------------------------------
+$color-dark-primary:    #0288d1;
+$color-primary:         #03a9f4;
+$color-light-primary:   #b3e5fc;
+$color-text:            #ffffff;
+$color-divider:         #b6b6b6;
+$color-text-secondary:  #727272;
+$color-text-primary:    #212121;
+$color-accent:          #00BCD4;
 
+$tablet-breakpoint:     "screen and (max-width: 768px)";
 
 //== Colors
 //
@@ -20,7 +32,6 @@ $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
-
 
 //== Scaffolding
 //
