@@ -54,44 +54,33 @@
   }
 }
 
-#slider {
-  background: url(../img/rabaquran003.jpg);
-  width: 100%;
-  background-size: cover;
-  background-position: 0;
+.box-center{
+  text-align: center;
+  padding:15px 0;
+}
 
-  .item {
-    color: $color-text;
-    padding: 200px 0;
+// muslih
+@import "slide";
 
-    h1 {
-      font-size: 2.8em;
-    }
-  }
-  .carousel-control {
-    visibility: hidden;
-  }
-  .carousel-indicators {
-    & li {
-      background-color: $color-text;
-      margin: 5px;
-    }
+#title{
+  @extend .box-center;
+}
 
-    & .active {
-      background-color: $color-accent;
-      border: 1px solid $color-accent;
-    }
-  }
-  .btn-success {
-    background: $color-accent;
-    border-color: $color-accent;
-    font-size: 0.8em;
-    padding: 10px 20px 10px 20px;
-    margin: 15px 0;
+#galeri{
+  @extend .box-center;
+  background: rgba($color-accent,0.08);
+}
 
-    &:hover {
-      background: $color-dark-primary;
-      border-color: $color-dark-primary;
-    }
-  }
+#video{
+  @extend .box-center;
+}
+
+#kontak{
+  @extend .box-center;
+  background: #eee;
+}
+
+footer{
+  @extend .box-center;
+  background: darken(#eee,10%);
 }
