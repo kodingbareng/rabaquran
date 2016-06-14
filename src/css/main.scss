@@ -1,3 +1,97 @@
 @import "variable";
 @import "bootstrap";
 @import "bootstrap/theme";
+
+.navbar-default {
+  background: transparent;
+  border-color: transparent;
+
+  .navbar-toggle {
+    @media #{$tablet-breakpoint} {
+      margin-top: 45px;
+    }
+  }
+
+  .navbar-nav {
+    margin: 35px 100px 0;
+    li {
+      &.active {
+        a {
+          color: $color-text;
+          text-decoration: underline;
+          background: transparent;
+
+          &:hover {
+            background: transparent;
+            color: $color-accent;
+          }
+        }
+      }
+      a {
+        color: $color-text;
+        &:hover {
+          color: $color-accent;
+        }
+      }
+    }
+    @media #{$tablet-breakpoint} {
+      margin: 0;
+      background-color: $color-dark-opaque;
+    }
+  }
+}
+
+.logo {
+  img {
+    margin: 15px 0 0 100px;
+    width: auto;
+    height: 48px;
+  }
+  @media #{$tablet-breakpoint} {
+    img {
+      margin: 15px 0 0 15px;
+    }
+  }
+}
+
+#slider {
+  background: url(../img/rabaquran003.jpg);
+  width: 100%;
+  background-size: cover;
+  background-position: 0;
+
+  .item {
+    color: $color-text;
+    padding: 200px 0;
+
+    h1 {
+      font-size: 2.8em;
+    }
+  }
+  .carousel-control {
+    visibility: hidden;
+  }
+  .carousel-indicators {
+    & li {
+      background-color: $color-text;
+      margin: 5px;
+    }
+
+    & .active {
+      background-color: $color-accent;
+      border: 1px solid $color-accent;
+    }
+  }
+  .btn-success {
+    background: $color-accent;
+    border-color: $color-accent;
+    font-size: 0.8em;
+    padding: 10px 20px 10px 20px;
+    margin: 15px 0;
+
+    &:hover {
+      background: $color-dark-primary;
+      border-color: $color-dark-primary;
+    }
+  }
+}
