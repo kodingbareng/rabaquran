@@ -4,7 +4,7 @@
 
 // header and navigation
 header{
-  background: blue;
+  // background: $color-accent;
   overflow: hidden;
   position: fixed;
   z-index: 99;
@@ -15,18 +15,27 @@ header{
   padding:15px 0; 
 }
 
+// ukuran default
 .width-default{
   @extend .col-md-10;
   @extend .col-md-offset-1;
 }
+
 #logo{
   margin:0;
   @extend .pull-left;
   img{
     width:60px;
   }
+  @media #{$tablet-breakpoint} {
+    float: none !important;
+    text-align: center;
+  }
 }
 nav{
+  @media #{$tablet-breakpoint} {
+    display: none;
+  }
   @extend .pull-right;
   ul{
     margin:16px 0;
@@ -36,69 +45,26 @@ nav{
     margin-left: 20px;
     display: inline-table;
     a{
+      transition-duration:0.5s;
       font-size: 18px;
-    }
-  }
-}
+      color:darken(#fff,10%);
 
-.navbar-default {
-  background: transparent;
-  border-color: transparent;
-
-  .navbar-toggle {
-    @media #{$tablet-breakpoint} {
-      margin-top: 45px;
-    }
-  }
-
-  .navbar-nav {
-    margin: 35px 100px 0;
-    li {
-      &.active {
-        a {
-          color: $color-text;
-          text-decoration: underline;
-          background: transparent;
-
-          &:hover {
-            background: transparent;
-            color: $color-accent;
-          }
-        }
-      }
-      a {
-        color: $color-text;
-        &:hover {
-          color: $color-accent;
-        }
+      text-shadow: 0 0 5px #000;
+      &:hover{
+        color:#fff;
+        text-decoration: none;
       }
     }
-    @media #{$tablet-breakpoint} {
-      margin: 0;
-      background-color: $color-dark-opaque;
-    }
   }
 }
 
-.logo {
-  img {
-    margin: 15px 0 0 100px;
-    width: auto;
-    height: 48px;
-  }
-  @media #{$tablet-breakpoint} {
-    img {
-      margin: 15px 0 0 15px;
-    }
-  }
-}
 
+// default box format #muslih
 .box-center{
   text-align: center;
   padding:15px 0;
 }
 
-// muslih
 @import "slide";
 
 #title{
