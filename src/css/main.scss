@@ -32,6 +32,7 @@ header{
   }
 }
 nav{
+  display: block;
   @media #{$tablet-breakpoint} {
     display: none;
     position: fixed;
