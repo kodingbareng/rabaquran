@@ -1,1 +1,1 @@
-$("#resp-btn").click(function(){$(this).toggleClass("open"),$("nav").fadeToggle()});
+$("#resp-btn").click(function(){$(this).toggleClass("open"),$("nav").fadeToggle()}),head=$("header"),$(window).scroll(function(){return $(this).scrollTop()>100?head.addClass("fill"):head.removeClass("fill")});
