@@ -3,7 +3,12 @@
 @import "bootstrap/theme";
 
 // header and navigation
+.fill{
+  background: $color-accent;
+  transition-duration:0.5s;
+}
 header{
+  transition-duration:0.5s;
   // background: $color-accent;
   position: fixed;
   z-index: 99;

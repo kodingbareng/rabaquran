@@ -4,3 +4,13 @@ $('#resp-btn').click(function(){
   $(this).toggleClass('open');
   $('nav').fadeToggle();
 });
+
+// add background when pull down
+head = $('header');
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 100) {
+    return head.addClass('fill');
+  } else {
+    return head.removeClass('fill');
+  }
+}); 
