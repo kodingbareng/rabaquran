@@ -5,14 +5,13 @@
 // header and navigation
 header{
   // background: $color-accent;
-  overflow: hidden;
   position: fixed;
   z-index: 99;
   top:0px;
   left:0px;
   right:0px;
 
-  padding:15px 0; 
+  padding:20px 0; 
 }
 
 // ukuran default
@@ -35,6 +34,23 @@ header{
 nav{
   @media #{$tablet-breakpoint} {
     display: none;
+    position: fixed;
+    overflow: hidden;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background: $color-accent;
+
+    li{
+      float: left;
+      clear: left;
+      line-height: 3.5em;
+      border-bottom: solid 1px #fff;
+      a{
+        font-size: 2em !important;
+      }
+    }
   }
   @extend .pull-right;
   ul{
@@ -46,8 +62,9 @@ nav{
     display: inline-table;
     a{
       transition-duration:0.5s;
-      font-size: 18px;
+      font-size: 16px;
       color:darken(#fff,10%);
+      text-transform: uppercase;
 
       text-shadow: 0 0 5px #000;
       &:hover{
@@ -57,6 +74,78 @@ nav{
     }
   }
 }
+
+// respinsive btn
+#resp-btn {
+  display: none;
+  @media #{$tablet-breakpoint} {
+    display: block;
+  }
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 15px;
+  transition-duration: .5s;
+  z-index: 9999;
+  .icon-circle{
+    cursor: pointer;
+    background: $color-accent;
+    box-shadow: 0 0 10px #444;
+    transition-duration: .5s;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 2px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    left: -15px;
+  }
+  .icon{
+    // normal icon
+    transition-duration: .5s;
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    top: 30px;
+    background-color: #fff;
+
+    &:before{
+      transition-duration:.5s;
+      position:absolute;
+      width:30px;
+      height:2px;
+      background-color:#fff;
+      content:"";
+      top:-10px;
+    }
+
+    &:after{
+      transition-duration:.5s;
+      position:absolute;
+      width:30px;
+      height:2px;
+      background-color:#fff;
+      content:"";
+      top:10px;}
+  }
+  
+  // resp menu open
+  &.open{
+    .icon{
+      transition-duration:.5s;
+      background:transparent
+    }
+
+    .icon:before{
+      transform:rotateZ(45deg) scaleX(1.25) translate(6.5px,6.5px)
+    }
+    .icon:after{
+      transform:rotateZ(-45deg) scaleX(1.25) translate(6px,-6px)
+    }
+  }
+}
+
 
 
 // default box format #muslih

@@ -1,1 +1,1 @@
-console.log("Gulp Bootstrap Starter Beta!");
+$("#resp-btn").click(function(){$(this).toggleClass("open"),$("nav").fadeToggle()});
