@@ -171,6 +171,16 @@ nav{
   background: rgba($color-accent,0.08);
 }
 
+.galeri-list-thumb{
+  padding:5px;
+  margin-bottom: 25px;
+  background: #fff;
+  border:solid 1px darken(#fff,10%);
+  img{
+    width: 100%;
+  }
+}
+
 #video{
   @extend .box-center;
 }
