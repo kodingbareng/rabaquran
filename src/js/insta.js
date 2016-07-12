@@ -68,9 +68,12 @@ $.fn.insfeed = function(pengaturan) {
 
       contentType: 'text/plain',
       success: function(data) {
-        console.log(data);
+        // console.log(data);
         userId = data.data[0].id;
+        
         showRecent(userId);
+        source.parent().append("<div class='row'><a href='http://instagram.com/"+settings.user+"' target='_blank' class='btn btn-info btn-sm'>Lihat yang lain</a></div>");
+        
       },
       error: function() {
       }
@@ -87,13 +90,14 @@ $.fn.insfeed = function(pengaturan) {
 
       contentType: 'text/plain',
       success: function(data) {
+        
         $.each(data.data, function(i, data){
           // console.log(data.images.thumbnail.url);
           thumbUrl = data.images.low_resolution.url;
           link = data.link;
           source.append("<div class=\'col-sm-3\'><a href=\'"+link+"\' target=_blank><div class=\'galeri-list-thumb\'><img src="+thumbUrl+"/></div></a></div>");
         });
-        console.log(data);
+        // console.log(data);
       },
       error: function() {
       }
@@ -102,7 +106,6 @@ $.fn.insfeed = function(pengaturan) {
 
   // fetch user id
   getUID();
-  // alert(userId);
   
 };
 
