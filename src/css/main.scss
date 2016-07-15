@@ -184,6 +184,12 @@ nav{
 #video{
   @extend .box-center;
 }
+.video-list{
+  .col-sm-3:nth-child(5n){
+    clear:left;
+    // background: red;
+  }
+}
 
 #kontak{
   @extend .box-center;
