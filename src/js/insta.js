@@ -1,56 +1,7 @@
-// variable
-// userId = '2714852415';
-// accessToken = '304071833.94c41be.1d6b7d236ede4efe8731490a7c579294';
 
-// (function($, window, document, undefined){
-//   var Insta = {
-//     init: function(options, elem){
-//       var self = this;
-
-//       self.elem = elem;
-//       self.$elem = $(elem);
-
-//       if (typeof options == 'string'){
-//         self.user = options;
-//       }else{
-//         self.user = options.user;
-//         self.options = $extend({}, $.fn.insfeed.options);
-//         console.log(self.options);
-//       }
-//     }
-//   };
-
-//   $.fn.insfeed = function(options) {
-//     return this.each(function(){
-//       var insta = Object.create(Insta);
-
-//       insta.init(options);
-//     });
-//   };
-
-//   $.fn.insfeed.options = {
-//     user: 'muslihz',
-//   };
-
-// })(jQuery, window, document);
-
-
-// $(document).ready(function(){
-//   $('.galery-list').insfeed({
-//     user: 'wkopi',
-//   });
-// });
-
-
-
-// variable
-// userId = '2714852415';
-accessToken = '304071833.94c41be.1d6b7d236ede4efe8731490a7c579294';
-
-//   
 (function ( $ ) {
 $.fn.insfeed = function(pengaturan) {
-  source = $(this);
+  var source = $(this);
   // konfigurasi class
   var settings = $.extend({
     limit: 8,
@@ -103,17 +54,15 @@ $.fn.insfeed = function(pengaturan) {
       }
     });
   }
-
   // fetch user id
   getUID();
-  
 };
 
 }( jQuery ));
 
 $(document).ready(function(){
   $('.galeri-list').insfeed({
-    token:accessToken,
+    token:'304071833.94c41be.1d6b7d236ede4efe8731490a7c579294',
     user:'rabaquran'
   });
 });
