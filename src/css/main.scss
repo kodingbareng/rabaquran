@@ -215,12 +215,18 @@ nav{
 }
 
 .galeri-list-thumb{
+  position:relative;
   padding:5px;
   margin-bottom: 25px;
   background: #fff;
   border:solid 1px darken(#fff,10%);
   img{
     width: 100%;
+  }
+  transition-duration:0.5s;
+  &:hover{
+    transition-duration:0.5s;
+    box-shadow: 0 0 10px rgba(#444,0.4);
   }
 }
 
@@ -232,6 +238,18 @@ nav{
   .col-sm-3:nth-child(5n){
     clear:left;
     // background: red;
+
+  }
+}
+.video-list-thumb{
+  @extend .galeri-list-thumb;
+  .duration{
+    background: rgba(#000,0.5);
+    color: #fff;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 }
 
