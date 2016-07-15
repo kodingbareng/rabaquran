@@ -7,6 +7,46 @@
   background: $color-accent;
   transition-duration:0.5s;
 }
+
+// loader
+.loader{
+  margin:50px auto;
+}
+$base-line-height: 24px;
+$off-white: rgba($color-accent, 0.2);
+$spin-duration: 1s;
+$pulse-duration: 750ms;
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {  
+  50% { 
+    background: $color-accent;
+  } 
+}
+
+.loading {
+  margin:10px auto;
+  display: block;
+    border-radius: 50%;
+    width: $base-line-height;
+    height: $base-line-height;
+    border: .25rem solid $off-white;
+    border-top-color: $color-accent;
+    animation: spin $spin-duration infinite linear;
+  &--double {
+    border-style: double;
+    border-width: .5rem;
+  }
+}
+
 header{
   transition-duration:0.5s;
   // background: $color-accent;
@@ -156,6 +196,9 @@ nav{
 
 // default box format #muslih
 .box-center{
+  h1{
+    margin-bottom: 30px;
+  }
   text-align: center;
   padding:15px 0;
 }
@@ -185,6 +228,7 @@ nav{
   @extend .box-center;
 }
 .video-list{
+  h5{line-height: 20px;}
   .col-sm-3:nth-child(5n){
     clear:left;
     // background: red;

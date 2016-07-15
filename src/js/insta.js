@@ -41,11 +41,12 @@ $.fn.insfeed = function(pengaturan) {
 
       contentType: 'text/plain',
       success: function(data) {
-        
+        source.html('');
         $.each(data.data, function(i, data){
           // console.log(data.images.thumbnail.url);
           thumbUrl = data.images.low_resolution.url;
           link = data.link;
+          
           source.append("<div class=\'col-sm-3\'><a href=\'"+link+"\' target=_blank><div class=\'galeri-list-thumb\'><img src="+thumbUrl+"/></div></a></div>");
         });
         // console.log(data);
